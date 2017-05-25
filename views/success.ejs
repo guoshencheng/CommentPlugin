@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+  <title>mhc评论登录</title>
+</head>
+<style>
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  position: relative;
+  font-family: helvetica-light;
+}
+
+.container {
+  width:200px;
+  height: 200px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 100px;
+  margin: auto;
+}
+
+.line_container {
+  color: #333333;
+  margin-top: 30px;
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+}
+
+.line_container .success_icon {
+  color: #fff;
+  border: solid 2px #dedede;
+  font-size: 18px;
+  text-align: center;
+  margin: 0 auto;
+  background: #09bb07;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  vertical-align: middle;
+}
+
+.desc {
+  font-size: 18px;
+  color:#aeaeae;
+}
+
+</style>
+<body>
+  <div class="container">
+    <div class="line_container">
+      <div class="success_icon">SUCCESS</div>
+    </div>
+    <div class="line_container">
+      登录成功
+    </div>
+    <div class="line_container desc">
+      正在跳转......
+    </div>
+  </div>
+</body>
+<script>
+  var userInfoString = '<%- JSON.stringify( GithubUser) %>'
+  var userInfo = JSON.parse(userInfoString);
+  window.close()
+</script>
+</html>
+

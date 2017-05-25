@@ -5,6 +5,13 @@ module.exports = {
     type: String,
     'default': shortid.generate
   },
-  id: String,
-  username: String
+  html_url: String,
+  url: String,
+  name: String,
+  avatar_url: String,
+  company: String,
+  blog: String,
+  location: String,
+  email: String,
+  bio: String
 }

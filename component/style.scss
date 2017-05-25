@@ -1,4 +1,58 @@
 #mhc_comment {
+  font-family: "Helvetica Neue",arial,sans-serif, helvatica-light;
+  font-size: 17px;
+  color: #333333;
+  font-weight: lighter;
   width: 100%;
-  
+  #comment_container {
+    .comment_item {
+      .left {
+        float: left;
+        width: 60px;
+        margin-right: 20px;
+        .avatar {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+        }
+      }
+      .right {
+        vertical-align: top;
+        overflow-wrap: break-word;
+        overflow: hidden;
+        .content {
+          min-height: 60px;
+        }
+        .info {
+          .user_name {
+            font-size: 16px;
+            font-weight: normal;
+            color: rgb(191, 24, 39);
+          }
+          .time_info {
+            font-size: 15px;
+            color: #b3b3b3;
+          }
+        }
+      }
+    }
+  }
+}
+.comment_login_alert {
+  border-radius: 5px;
+  border: solid 1px #aeaeae;
+  background: white;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+  }
 }

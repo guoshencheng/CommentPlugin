@@ -6,6 +6,7 @@ module.exports = {
     'default': shortid.generate
   },
   username: String,
+  avatar: String,
   comment: String,
   url: String
 }
