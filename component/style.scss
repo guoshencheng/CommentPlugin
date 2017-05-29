@@ -5,7 +5,28 @@
   font-weight: lighter;
   width: 100%;
   #comment_container {
+    .title_container {
+      overflow: hidden;
+      border-bottom: solid 1px #aeaeae;
+      padding: 15px 0;
+      div {
+        font-weight: bold;
+        font-size: 20px;
+        color: #656c7a;
+        margin: 0;
+      }
+      .comment_count {
+        float: left;
+      }
+      .login {
+        float: right;
+      }
+    }
+    .comment_list {
+      padding: 15px 0;
+    }
     .comment_item {
+      clear: both;
       .left {
         float: left;
         width: 60px;

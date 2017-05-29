@@ -46,6 +46,8 @@ class Container extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      user: {
+      },
       comments: [
       {
         avatar: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1494947922588&di=3ee6a91dffc18275806a76f34c073cba&imgtype=0&src=http%3A%2F%2Fwww.jf258.com%2Fuploads%2F2014-08-28%2F122335664.jpg",
@@ -85,9 +87,13 @@ class Container extends React.Component {
   }
   
   render() {
-    const { comments } = this.state;
+    const { comments, user } = this.state;
     return (
       <div id="comment_container">
+        <div className="title_container">
+          <div className="comment_count">27 条评论</div>
+          <div className="login">登录</div>
+        </div>
         <div className="comment_list">
           { comments.map((comment, index)=> {
             return <CommentItem key={ index } comment={ comment } ></CommentItem>
