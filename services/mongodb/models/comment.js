@@ -8,5 +8,6 @@ module.exports = {
   username: String,
   avatar: String,
   comment: String,
+  time: String,
   url: String
 }

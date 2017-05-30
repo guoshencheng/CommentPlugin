@@ -1,31 +1,81 @@
 #mhc_comment {
-  font-family: "Helvetica Neue",arial,sans-serif, helvatica-light;
-  font-size: 17px;
-  color: #333333;
-  font-weight: lighter;
   width: 100%;
   #comment_container {
+    font-family: "Helvetica Neue",arial,sans-serif, helvatica-light;
+    font-size: 17px;
+    color: #333333;
+    font-weight: lighter;
     .title_container {
       overflow: hidden;
-      border-bottom: solid 1px #aeaeae;
+      border-bottom: solid 3px #dedede;
       padding: 15px 0;
       div {
         font-weight: bold;
-        font-size: 20px;
+        font-size: 17px;
         color: #656c7a;
         margin: 0;
       }
       .comment_count {
+        margin-left: 10px;
         float: left;
       }
-      .login {
+      .login, .username {
+        margin-right: 10px;
         float: right;
+      }
+      .login {
+        cursor: pointer;
+      }
+    }
+    .create_comment {
+      clear: both;
+      overflow: hidden;
+      padding: 20px 0px;
+      .left {
+        float: left;
+        width: 60px;
+        margin-right: 20px;
+        .avatar {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+        }
+      }
+      .right {
+        vertical-align: top;
+        overflow-wrap: break-word;
+        overflow: hidden;
+        .textarea {
+          textarea {
+            border-radius: 5px;
+            border: solid 1px #aeaeae;
+            font-size: inherit;
+            font-family: inherit;
+            font-weight: inherit;
+            width: 100%;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            resize: none;
+          }
+        }
+        .submit {
+          font-size: 15px;
+          color: white;
+          font-weight: normal;
+          display: inline-block;
+          background: #f06373;
+          padding: 5px 10px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
       }
     }
     .comment_list {
       padding: 15px 0;
     }
     .comment_item {
+      padding: 20px 0px;
       clear: both;
       .left {
         float: left;
