@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "web:start": "webpack-dev-server --port 7000 --hot --inline"
+    "web:start": "webpack-dev-server --port 7000 --hot --inline",
+    "build": "NODE_ENV=production webpack --progress --display-error-details --config webpack.config.product.js"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
