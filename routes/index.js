@@ -77,7 +77,7 @@ router.get("/users/:uid", cross, function(req, res, next) {
 })
 
 router.get('/comment/login', function(req, res, next) {
-  var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
+  var fullUrl = 'https://' + req.get('host') + req.originalUrl;
   const code = req.query.code;
   if (code) {
     githubApi.access_token(code).then((data) => {
