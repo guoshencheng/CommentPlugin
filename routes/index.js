@@ -3,6 +3,7 @@ var router = express.Router();
 var cors = require('cors');
 var mongodb = require('../services/mongodb');
 var githubApi = require('../services/github/api.js');
+var ms = require('ms');
 
 var User = mongodb.user.Model;
 
@@ -95,7 +96,7 @@ router.get('/comment/login', function(req, res, next) {
         }
       }).then(result => {
           var githubUser = result.toObject({ transform: true });
-          res.cookie("comment_user_id", githubUser.id, { maxAge: "7d"});
+          res.cookie("comment_user_id", githubUser.id, { maxAge: ms("7d")});
           res.render("success", {
             GithubUser: githubUser
           });

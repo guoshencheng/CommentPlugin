@@ -47,13 +47,6 @@ module.exports = {
   plugins:[
     new ExtractTextPlugin('[name].css'),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.DefinePlugin({
-      env:{
-        isDevelopment:true,
-      },
-      __DEV__:true,
-      __DEBUG__:true,
-    }),
   ],
   devtool: 'source-map'
 }
