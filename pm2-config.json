@@ -1,0 +1,14 @@
+[
+  {
+    "name"        : "comment",
+    "script"      : "./bin/www",
+    "watch"       : false,
+    "instances"   : "max",
+    "exec_mode"   : "2",
+    "PORT": "3001",
+    "out_file": "./logs/app.log",
+    "error_file": "./logs/app.log",
+    "merge_logs": true,
+    "log_date_format": "YYYY-MM-DD HH:mm Z"
+  }
+]
