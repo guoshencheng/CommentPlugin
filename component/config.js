@@ -1,3 +1,3 @@
 module.exports = {
-  host: 'http://comment.guoshencheng.com'
+  host: 'https://comment.guoshencheng.com'
 }

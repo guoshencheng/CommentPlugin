@@ -57,6 +57,10 @@
             -moz-box-sizing: border-box;
             box-sizing: border-box;
             resize: none;
+            display: block;
+            max-width: none;
+            min-width: none;
+            min-height: none;
           }
         }
         .submit {
