@@ -22,12 +22,12 @@ mhc_comment.login = (cb) => {
     "DescriptiveWindowName",
     "width=420,height=230,resizable,scrollbars=yes,status=1"
   );
-  var timer = setInterval(function() {   
-    if(windowObjectReference.closed) {  
-      clearInterval(timer);  
+  var timer = setInterval(function() {
+    if(windowObjectReference.closed) {
+      clearInterval(timer);
       cb && cb()
-    }  
-  }, 1000); 
+    }
+  }, 1000);
 }
 
 mhc_comment.comments = () => {
@@ -62,4 +62,3 @@ mhc_comment.logout = () => {
 }
 
 export default mhc_comment;
-

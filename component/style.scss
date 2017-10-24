@@ -1,16 +1,18 @@
 #mhc_comment {
-  width: 100%;
+  font-size: 13px;
+  max-width: 600px;
+  margin: auto;
   #comment_container {
+    padding: 0 30px;
     font-family: "Helvetica Neue",arial,sans-serif, helvatica-light;
-    font-size: 17px;
     color: #333333;
-    font-weight: lighter;
+    font-weight: 300;
     .title_container {
       overflow: hidden;
-      border-bottom: solid 3px #dedede;
-      padding: 15px 0;
+      border-bottom: solid 1px #dedede;
+      padding: 10px 0;
       div {
-        font-weight: bold;
+        font-weight: 400;
         font-size: 17px;
         color: #656c7a;
         margin: 0;
@@ -30,7 +32,7 @@
     .create_comment {
       clear: both;
       overflow: hidden;
-      padding: 20px 0px;
+      padding: 20px 0px 12px;
       .left {
         float: left;
         width: 60px;
@@ -46,7 +48,11 @@
         overflow-wrap: break-word;
         overflow: hidden;
         .textarea {
+          font-size: 13px;
+          overflow: hidden;
           textarea {
+            padding: 8px 15px;
+            outline: none;
             border-radius: 5px;
             border: solid 1px #aeaeae;
             font-size: inherit;
@@ -72,6 +78,8 @@
           padding: 5px 10px;
           border-radius: 5px;
           cursor: pointer;
+          float: right;
+          margin: 10px 0;
         }
       }
     }
@@ -96,12 +104,12 @@
         overflow-wrap: break-word;
         overflow: hidden;
         .content {
+          margin: 10px 0;
           min-height: 60px;
         }
         .info {
           .user_name {
             font-size: 16px;
-            font-weight: normal;
             color: rgb(191, 24, 39);
           }
           .time_info {

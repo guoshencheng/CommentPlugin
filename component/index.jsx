@@ -7,7 +7,7 @@ import './style.scss'
 
 const dateFormat = (timestamp) => {
   var date = new Date(parseInt(timestamp));
-  return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+  return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}`
 }
 
 class CommentItem extends React.Component {
@@ -95,7 +95,7 @@ class Container extends React.Component {
       });
     }
   }
-  
+
   render() {
     const { comments, user } = this.state;
     const avatarStyle = {
@@ -108,13 +108,13 @@ class Container extends React.Component {
         <div className="title_container">
           <div className="comment_count">{ comments ? comments.length : 0 } 条评论</div>
           {
-            user && user.id ? 
+            user && user.id ?
             (<div className="username">{ user.name }</div>):
             (<div className="login" onClick={ this.loginGithub.bind(this) }>登录</div>)
           }
         </div>
         {
-          user && user.id && 
+          user && user.id &&
           (
             <div className="create_comment">
               <div className="left">
@@ -122,7 +122,7 @@ class Container extends React.Component {
               </div>
               <div className="right">
                 <div className="textarea">
-                  <textarea ref="textarea" name="textarea" rows="3"></textarea>           
+                  <textarea ref="textarea" name="textarea" rows="3"></textarea>
                   <div className="submit" onClick={ this.createComment.bind(this) }>发表评论</div>
                 </div>
               </div>
@@ -143,4 +143,3 @@ ReactDOM.render(
   <Container></Container>,
   document.querySelector('#mhc_comment')
 )
-
