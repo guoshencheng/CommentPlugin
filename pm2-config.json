@@ -1,7 +1,7 @@
 [
   {
     "name"        : "comment",
-    "script"      : "./bin/www",
+    "script"      : "./server/bin/www",
     "watch"       : false,
     "instances"   : "2",
     "exec_mode"   : "cluster",
