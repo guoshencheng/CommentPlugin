@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "antd": "^2.13.8",
     "ayano-react": "^0.1.10",
     "ayano-script": "^0.1.12",
     "react": "^16.0.0",
