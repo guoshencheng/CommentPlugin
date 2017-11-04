@@ -11,6 +11,7 @@ const check = (req, res, next) => {
         next()
       } else {
         next(new errors.NoUserFound);
+      }
     }).catch(next)
   } else {
     next(new errors.NoAuthError());

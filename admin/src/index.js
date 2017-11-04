@@ -1,6 +1,5 @@
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import { Toast, Popup } from 'antd-mobile';
 import { createApp } from 'ayano-react';
 
 //redux actions and reducers

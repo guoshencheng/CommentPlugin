@@ -24,5 +24,5 @@ const allByScene = (req, res, next) => {
 }
 
 module.exports = {
-  all, allByScene
+  create, allByScene
 }
