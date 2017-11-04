@@ -11,4 +11,3 @@ module.exports = files.filter(file => {
   var model = require('./' + file);
   return Object.assign({}, model, { __filename: file.replace(jsFileRegExp, '') })
 })
-

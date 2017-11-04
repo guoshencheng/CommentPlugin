@@ -5,9 +5,18 @@ module.exports = {
     type: String,
     'default': shortid.generate
   },
-  username: String,
-  avatar: String,
-  comment: String,
-  time: String,
-  url: String
+  comment: {
+    type: String,
+    default: ""
+  },
+  createTime: {
+    type: Date,
+    default: Date.now
+  },
+  appId: {
+    type: String,
+  },
+  url: {
+    type: String
+  }
 }

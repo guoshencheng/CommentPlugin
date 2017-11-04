@@ -19,9 +19,9 @@ const access_token = (code) => {
       Accept: "application/json",
       "Content-Type": "application/json"
     },
-    url: host + '/login/oauth/access_token', 
+    url: host + '/login/oauth/access_token',
     data: {
-      code, client_id, client_secret 
+      code, client_id, client_secret
     }
   }).then(response_handler);
 }
@@ -36,8 +36,8 @@ const redirectUrl = (url) => {
   return "http://github.com/login/oauth/authorize?client_id=" + client_id + "&redirect_uri=" + encodeURIComponent(url)
 }
 
-module.exports = { 
-  access_token, 
+module.exports = {
+  access_token,
   user ,
   redirectUrl
 }
