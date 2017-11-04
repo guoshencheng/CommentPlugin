@@ -1,6 +1,21 @@
 var githubApi = require('../github/api.js');
 var mongodb = require('../mongodb');
+var errors = require('../errors.js');
 var User = mongodb.user.Model;
+
+const check = (req, res, next) => {
+  const comment_user_id = req.session.comment_user_id;
+  if (comment_user_id) {
+    User.findOne({ _id: comment_user_id }).then(doc => {
+      if (result) {
+        next()
+      } else {
+        next(new errors.NoUserFound);
+    }).catch(next)
+  } else {
+    next(new errors.NoAuthError());
+  }
+}
 
 const login = (req, res, next) => {
   var fullUrl = 'https://' + req.get('host') + req.originalUrl;
@@ -38,5 +53,5 @@ const login = (req, res, next) => {
 }
 
 module.exports = {
-  login
+  login, check
 };

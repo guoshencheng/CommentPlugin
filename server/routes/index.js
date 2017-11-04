@@ -44,7 +44,7 @@ router.get("/users/:uid", cross, controllers.UserController.findById);
 
 // coments
 router.post('/comments', cors(options), controllers.CommentController.create);
-router.get('/comments', cross, controllers.CommentController.all);
+router.get('/comments', cross, controllers.CommentController.allByScene);
 router.options('/comments', cors(options));
 
 module.exports = router;

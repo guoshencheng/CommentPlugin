@@ -1,8 +1,6 @@
 var axios = require('axios');
 const host = "https://github.com";
 const apiHost = "https://api.github.com"
-const client_id = "72dd5c1312868e5a16ec";
-const client_secret = "004da2f7db23458af2d5f8a960beff64c9200839";
 
 const response_handler = (response) => {
   if (response.status == 200 && response.data) {

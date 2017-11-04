@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    [
+      "import",
+      { "style": "css", "libraryName": "antd" }
+    ],
+  ],
+  "presets": ["es2015", "react"]
+}

@@ -11,18 +11,18 @@ const create = (req, res, next) => {
   })
 }
 
-const all = (req, res, next) => {
-  var url = req.query.url;
+const allByScene = (req, res, next) => {
+  var scene =  decodeURIComponent(req.query.scene);
   var Comment = mongodb.comment.Model;
-  Comment.find({ url: url }).then(docs => {
-    res.json(docs.map( doc => {
+  Comment.find({ scene: scene }).then(docs => {
+    res.json(docs.map(doc => {
       return doc.toObject({ transform: true });
-    } ));
+    }));
   }).catch(reason => {
     next(reason);
   })
 }
 
 module.exports = {
-  all, create
+  all, allByScene
 }

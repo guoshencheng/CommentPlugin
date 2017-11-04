@@ -16,7 +16,7 @@ module.exports = {
   appId: {
     type: String,
   },
-  url: {
+  scene: {
     type: String
   }
 }
