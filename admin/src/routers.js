@@ -1,9 +1,11 @@
 import { Switch, Route } from 'react-router-dom';
 import Home from './views/Home/Home.js';
 import NaviHeader from './components/NaviHeader.js';
+import { connectApp } from 'ayano-react';
 
-const Container = ({ match }) => {
+const Container = ({ match, actions }) => {
   const parent = match.path;
+  actions.auth.profile()
   return (
     <div className="app-container">
       <Switch>
@@ -17,6 +19,6 @@ const Container = ({ match }) => {
 export const homeRouter = {
   home: {
     path: '/',
-    component: Container,
+    component: connectApp()(Container),
   },
 }

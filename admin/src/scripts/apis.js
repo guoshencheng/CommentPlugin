@@ -5,9 +5,11 @@ let apis = {
   repo: {
     path: '/repos/guoshencheng/ayano',
     method: methods.get
+  },
+  profile: {
+    path: '/api/profile',
+    method: methods.get
   }
 }
-
-apis.host = "https://api.github.com";
 
 export default apis;

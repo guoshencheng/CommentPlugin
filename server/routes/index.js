@@ -47,4 +47,6 @@ router.post('/comments', cors(options), controllers.CommentController.create);
 router.get('/comments', cross, controllers.CommentController.allByScene);
 router.options('/comments', cors(options));
 
+router.get('/api/profile', cors(options), controllers.UserController.profile);
+
 module.exports = router;
