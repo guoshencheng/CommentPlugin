@@ -1,6 +1,6 @@
-export const profile = () => ({ apis, reducerActions}) => {
+export const profile = () => ({ apis, actions }) => {
   apis.profile().then(res => {
-    console.log(res)
+    const { reducerActions } = actions;
+    console.log(reducerActions);
   })
-  console.log(apis, reducerActions);
 }
